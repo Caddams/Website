@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="C:\Users\RedMa\OneDrive\Desktop\Self-website\Professional\Style.css">
+		<meta charset="utf-8">
+		<title>Kayla's Portfolio</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="name">
+				<h1>Kayla Beyerlein</h1>
+				<h2>Bachelor of Science in Software Engineering, Colorado Tech</h2>
+			</div>
+			<div class="button-container">
+				<button class="animated-button inactive" disabled>Home</button>
+                <a href="C:\Users\RedMa\OneDrive\Desktop\Self-website\Professional\Portfolio.html">
+					<button class="animated-button">Portfolio</button>
+				</a>
+				<a href="C:\Users\RedMa\OneDrive\Desktop\Self-website\resume.pdf" target="_blank">
+				<button class="animated-button">My Resume</button>
+				</a>	
+				<a href="C:\Users\RedMa\OneDrive\Desktop\Self-website\Professional\Contact.html">
+				<button class="animated-button">Contact</button>
+				</a>
+			</div>
+		</header>
+	<main class="main-content">
+		<div class="photo-container">
+		<img src="C:\Users\RedMa\OneDrive\Desktop\Self-website\Professional\Assets\Site.jpg" alt="A black and white image of a woman" class="main-photo">
+	</div>
+	<div class="content-group">
+	<div class="button-group">
+		<div class="button-wrapper">
+			<button class="info-button" onclick="toggleText('about-me-text', this)">About Me</button>
+		</div>
+		<div class="button-wrapper">
+			<button class="info-button" onclick="toggleText('my-experiences-text', this)">My Experience</button>
+		</div>
+		<div class="button-wrapper">
+			<button class="info-button" onclick="toggleText('misc-text', this)">Misc</button>
+		</div>
+	</div>
+	<div class="text-content">
+		<p id="about-me-text" class="hidden">Hello! My name is Kayla Beyerlein, and I am a dedicated Technical Support Specialist with over 7 years of experience troubleshooting phones, tablets, computers, routers, and IoT devices at T-Mobile.
+			<br>
+			I hold a Bachelor's degree from CTU, which has equipped me with the skills needed for full-stack development. I am proficient in various scripting languages. Since graduating, I have continued my education by pursuing certifications. I currently hold a Microsoft IT Certificate and am in the process of obtaining an AWS Certificate.
+			<br>
+			Outside of work, I am passionate about learning new things and am a quick study. I enjoy reading, gardening, and spending time with animals. 
+			
+			Feel free to reach out to me using the Contact page. I am open to freelance work and collaborating on projects.</p>
+		<p id="my-experiences-text" class="hidden">I have been working for T-Mobile since January 2018. Initially, I served as an Account Expert until mid-2021, where I assisted customers with billing inquiries and provided basic troubleshooting. I was then promoted to the Technical Support team, where I have been resolving complex technical issues, collaborating with engineering teams, and improving customer satisfaction.
+			<br>
+			During this period, I also earned my Bachelor’s in Computer Science with a focus on Software Engineering. I am currently continuing my education through various certifications.
+			<br>
+			Prior to this, I worked as a Department Manager at Walmart from 2012 to 2017, managing the Shoes, Jewelry, and Accessories departments. During this time, I also completed an Apprentice Electrician course through IEC Chesapeake, where I learned about commercial and residential wiring.</p>
+		<p id="misc-text" class="hidden">Misc</p>
+	</div>
+</div>
+</main>
+        <footer class="footer">
+		<script>
+			document.write("Last Modified: " + document.lastModified)
+		</script>
+        </footer>
+		<script>
+        function toggleText(id, button) {
+            var textElements = document.querySelectorAll('.text-content p');
+            var buttons = document.querySelectorAll('.info-button');
+            textElements.forEach(function(element) {
+                element.classList.add('hidden');
+            });
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            var element = document.getElementById(id);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+                button.classList.add('active');
+            } else {
+                element.classList.add('hidden');
+                button.classList.remove('active');
+            }
+        }
+		</script>
+	</body>
+</html>

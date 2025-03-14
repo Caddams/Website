@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="C:\Users\RedMa\OneDrive\Desktop\Self-website\Professional\Style.css">
+		<meta charset="utf-8">
+		<title>Kayla's Portfolio</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="name">
+				<h1>Kayla Beyerlein</h1>
+				<h2>Bachelor of Science in Software Engineering, Colorado Tech</h2>
+			</div>
+			<div class="button-container">
+                <a href="C:\Users\RedMa\OneDrive\Desktop\Self-website\Professional\Home.html">
+				<button class="animated-button">Home</button>
+                </a>
+				<button class="animated-button inactive" disabled>Portfolio</button>
+				<a href="C:\Users\RedMa\OneDrive\Desktop\Self-website\resume.pdf" target="_blank">
+				<button class="animated-button">My Resume</button>
+				</a>	
+                <a href="C:\Users\RedMa\OneDrive\Desktop\Self-website\Professional\Contact.html">
+                    <button class="animated-button">Contact</button>
+                </a>
+			</div>
+		</header>
+        <main>
+            <div class="intro-text2">
+                <h4>i'm most proud of this icon I made for the project</h4>
+                <img src="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/icon.png" alt="BMS Icon" class="project-icon">
+            </div>
+            <div class="intro-text2">
+                <h4>I had a lot of fun designing the project, I have an interest in art and UI/UX design.</h4>
+            </div>
+        <div class="image-row">
+            <div class="image-container">
+                <img src="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/Base_Screen.png" alt="Art Image" class="expandable-image">
+            </div>
+            <div class="image-container2">
+                <img src="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/TV_Base.png" alt="New Art Image" class="expandable-image">
+            </div>
+            <div class="image-container3">
+                <img src="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/TV.png" alt="New Art Image" class="expandable-image">
+            </div>
+        </div>
+        <div class="intro-text3">
+            <h4>These icons would be used in the final product, the gif plays when you hover over it.</h4>
+        </div>
+        <div class="gif-row">
+            <div class="gif-container">
+                <img src="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/inventory.png" 
+                     data-gif="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/inventory.gif" 
+                     alt="Hover to play GIF" class="hover-gif">
+            </div>
+            <div class="gif-container">
+                <img src="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/buy.png" 
+                     data-gif="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/buy.gif" 
+                     alt="Hover to play GIF" class="hover-gif">
+            </div>
+            <div class="gif-container">
+                <img src="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/stock.png" 
+                     data-gif="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/stock.gif" 
+                     alt="Hover to play GIF" class="hover-gif">
+            </div>
+            <div class="gif-container">
+                <img src="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/cart.png" 
+                     data-gif="C:/Users/RedMa/OneDrive/Desktop/Self-website/Professional/Assets/cart.gif" 
+                     alt="Hover to play GIF" class="hover-gif">
+            </div>
+        </div>
+        </main>
+        <footer class="footer">
+            <script>
+                document.write("Last Modified: " + document.lastModified)
+            </script>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const hoverGifs = document.querySelectorAll('.hover-gif');
+        
+                hoverGifs.forEach(function(hoverGif) {
+                    const originalSrc = hoverGif.src;
+                    const gifSrc = hoverGif.getAttribute('data-gif');
+        
+                    hoverGif.addEventListener('mouseover', function() {
+                        hoverGif.src = gifSrc;
+                    });
+        
+                    hoverGif.addEventListener('mouseout', function() {
+                        hoverGif.src = originalSrc;
+                    });
+                });
+            });
+        </script>
+    </body>
+    </html>
